@@ -6,31 +6,32 @@ import Bills from "./components/Bills";
 import Checkout from "./components/Checkout";
 import Tables from "./components/Tables";
 
+
 function App() {
-  let Component;
+  let component;
   switch (window.location.pathname) {
     case "/":
       break;
     case "/drinks":
-      Component = Drinks;
+      component = <Drinks />;
       break;
     case "/food":
-      Component = Food;
+      component = <Food />;
       break;
     case "/tables":
-      Component = Tables;
+      component = <Tables />;
       break;
     case "/bills":
-      Component = Bills;
+      component = <Bills />;
       break;
     case "/checkout":
-      Component = Checkout;
+      component = <Checkout />;
       break;
   }
   return (
     <div>
     <Topbar />
-    <Component />
+    {component}
     </div>
 
   )
