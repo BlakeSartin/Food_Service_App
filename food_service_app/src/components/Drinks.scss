@@ -18,10 +18,9 @@
   position: relative;
   flex-wrap: wrap;
   margin: 5px;
-  height: 200px;
 
   img {
-    height: 80%;
+    height: 150px;
     width: 150px;
     object-fit: cover;
     z-index: 1;
@@ -52,5 +51,15 @@
       opacity: 0.2;
       z-index: 0;
     }
+  }
+  
+  button {
+    margin: 10px;
+  }
+  .plus{
+    color: green;
+  }
+  .minus{
+    color: red;
   }
 }
