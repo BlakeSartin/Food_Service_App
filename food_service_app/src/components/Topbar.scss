@@ -2,22 +2,21 @@
   background-color: black;
   color: white;
   display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  gap: 2rem;
-  padding: 0 1rem;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
 }
 
 .site-title {
   font-size: 2rem;
+  padding-right: 10px;
 }
 
 .nav ul {
-  padding: 0;
-  margin: 0;
   list-style: none;
   display: flex;
   gap: 1rem;
+  padding: 5px;
 }
 
 .nav a {
@@ -26,7 +25,6 @@
   height: 100%;
   display: flex;
   align-items: center;
-  padding: .25rem;
 }
 
 .nav li.active {
