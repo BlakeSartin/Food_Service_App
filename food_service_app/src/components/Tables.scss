@@ -30,12 +30,6 @@
   }
 }
 
-.seats {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
 
 .seat {
   padding: 5px;
@@ -43,6 +37,7 @@
   border-color: black;
   margin: 2px;
   border-radius: 10px;
+  max-width: 33px;
   &:hover {
     background-color:black;
     color: white;
