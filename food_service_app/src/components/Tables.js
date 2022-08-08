@@ -29,11 +29,12 @@ let data = [
   },
 ]
 
-export default function Tables() {
-  return <div className="table-container">
+export default function Tables({tableOpen, setTableOpen}) {
+
+  return <div className={"table-container" + (tableOpen && "active")}>
     {data.map((d) => (
       <div className="table">
-      <h2>{d.table} <TableBar/></h2>
+      <button className="table-button" onClick={() => setTableOpen(!tableOpen)}>{d.table} <TableBar/></button>
       {d.seats.map((seat) => (
         <button className="seat">{seat} <Chair  fontSize="small"/></button>
       ))}

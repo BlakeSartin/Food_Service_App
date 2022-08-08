@@ -18,7 +18,7 @@
   border-radius: 10px;
   margin: 10px;
   padding: 10px;
-  width: 90%;
+  width: 95%;
 
 
   h2 {
@@ -28,6 +28,13 @@
     flex-direction: column;
     padding-right: 10px;
   }
+}
+
+.table-button {
+  border-radius: 10px;
+  max-width: 40px;
+  background-color: lightgreen;
+  margin: 5px;
 }
 
 
