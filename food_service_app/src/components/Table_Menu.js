@@ -34,9 +34,9 @@ export default function Table_Menu() {
     <div className="table_menu">
       {data.map((d) => (
          <div className="expanded_table">
-         <button className="expanded_table">{d.table}<TableBar/></button>
+         <button className="expanded_table_button">{d.table}<TableBar/></button>
          {d.seats.map((seat) => (
-          <button className="expanded_chair">{seat}<Chair/></button>
+          <button className="expanded_chair_button">{seat}<Chair/></button>
          ))}
          </div>
       ))}
