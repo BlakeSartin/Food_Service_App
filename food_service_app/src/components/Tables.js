@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Tables.scss"
 import {Chair, TableBar} from "@mui/icons-material"
 
@@ -29,16 +29,24 @@ let data = [
   },
 ]
 
-export default function Tables({tableOpen, setTableOpen}) {
+export default function Tables() {
+  const [isActive, setActive] = useState("false");
 
-  return <div className={"table-container" + (tableOpen && "active")}>
+  const handleToggle = () => {
+    setActive(!isActive);
+  };
+  
+  return <div className={isActive ? "table_container" : "expanded_table_container"}>
+
+    <button onClick={handleToggle}>BUTTON</button>
     {data.map((d) => (
-      <div className="table">
-      <button className="table-button" onClick={() => setTableOpen(!tableOpen)}>{d.table} <TableBar/></button>
+      <div className={isActive ? "table" : "expanded_table"}>
+      <button className={isActive ? "table-button" : "expanded_table_button"} >{d.table} <TableBar/></button>
       {d.seats.map((seat) => (
-        <button className="seat">{seat} <Chair  fontSize="small"/></button>
+        <button className={isActive ? "seat" : "expanded_seat"}>{seat} <Chair  fontSize="small"/></button>
       ))}
       </div>
     ))}
     </div>
+    
 }

@@ -1,9 +1,18 @@
-.table-container {
+.table_container {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   margin: 10px;
+  transition: all 1s ease;
+}
+.expanded_table_container {
+  display: flex;
+  justify-items: center;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: 10px;
+  transition: all 1s ease;
 }
 
 .table {
@@ -19,7 +28,7 @@
   margin: 10px;
   padding: 10px;
   width: 95%;
-
+  transition: all 1s ease;
 
   h2 {
     display: flex;
@@ -27,7 +36,23 @@
     align-items: center;
     flex-direction: column;
     padding-right: 10px;
+    transition: all 1s ease;
   }
+}
+.expanded_table {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: rgba(3, 3, 51, 0.952);
+  color: white;
+  border: 2px solid;
+  border-color: black;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  width: 90%;
+  transition: all 1s ease;
 }
 
 .table-button {
@@ -35,8 +60,15 @@
   max-width: 40px;
   background-color: lightgreen;
   margin: 5px;
+  transition: all 1s ease;
 }
-
+.expanded_table_button {
+  border-radius: 10px;
+  max-width: 40px;
+  background-color: lightgreen;
+  margin: 5px;
+  transition: all 1s ease;
+}
 
 .seat {
   padding: 5px;
@@ -45,9 +77,24 @@
   margin: 2px;
   border-radius: 10px;
   max-width: 33px;
+  transition: all 1s ease;
   &:hover {
-    background-color:black;
+    background-color: black;
     color: white;
     transition: all 1s ease;
+  }
 }
+.expanded_seat {
+  padding: 5px;
+  border: 2px solid;
+  border-color: black;
+  margin: 5px;
+  border-radius: 10px;
+  max-width: 40px;
+  transition: all 1s ease;
+  &:hover {
+    background-color: black;
+    color: white;
+    transition: all 1s ease;
+  }
 }

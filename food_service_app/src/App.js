@@ -6,10 +6,11 @@ import Bills from "./components/Bills";
 import Checkout from "./components/Checkout";
 import Tables from "./components/Tables";
 import { useState } from "react";
-import Table_Menu from "./components/Table_Menu";
+
 
 
 function App() {
+  
 
   let component;
   switch (window.location.pathname) {
@@ -34,7 +35,6 @@ function App() {
   return (
     <div>
     <Topbar />
-    <Table_Menu />
     {component}
     </div>
 

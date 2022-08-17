@@ -30,16 +30,14 @@ let data = [
   },
 ]
 export default function Table_Menu() {
-  return (
-    <div className="table_menu">
-      {data.map((d) => (
-         <div className="expanded_table">
-         <button className="expanded_table_button">{d.table}<TableBar/></button>
-         {d.seats.map((seat) => (
-          <button className="expanded_chair_button">{seat}<Chair/></button>
-         ))}
-         </div>
-      ))}
-      </div>
-  )
+  <div className="table_menu">
+  {data.map((d) => (
+     <div className="expanded_table">
+     <button className="expanded_table_button">{d.table}<TableBar/></button>
+     {d.seats.map((seat) => (
+      <button className="expanded_chair_button">{seat}<Chair/></button>
+     ))}
+     </div>
+  ))}
+  </div>
 }
