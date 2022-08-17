@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   margin: 10px;
-  transition: all 1s ease;
+  
 }
 .expanded_table_container {
   display: flex;
@@ -12,7 +12,6 @@
   align-items: flex-start;
   flex-direction: column;
   margin: 10px;
-  transition: all 1s ease;
 }
 
 .table {
@@ -28,7 +27,6 @@
   margin: 10px;
   padding: 10px;
   width: 95%;
-  transition: all 1s ease;
 
   h2 {
     display: flex;
@@ -36,7 +34,6 @@
     align-items: center;
     flex-direction: column;
     padding-right: 10px;
-    transition: all 1s ease;
   }
 }
 .expanded_table {
@@ -52,7 +49,6 @@
   margin: 10px;
   padding: 10px;
   width: 90%;
-  transition: all 1s ease;
 }
 
 .table-button {
@@ -60,14 +56,12 @@
   max-width: 40px;
   background-color: lightgreen;
   margin: 5px;
-  transition: all 1s ease;
 }
 .expanded_table_button {
   border-radius: 10px;
   max-width: 40px;
   background-color: lightgreen;
   margin: 5px;
-  transition: all 1s ease;
 }
 
 .seat {
@@ -77,7 +71,6 @@
   margin: 2px;
   border-radius: 10px;
   max-width: 33px;
-  transition: all 1s ease;
   &:hover {
     background-color: black;
     color: white;
@@ -91,10 +84,21 @@
   margin: 5px;
   border-radius: 10px;
   max-width: 40px;
-  transition: all 1s ease;
   &:hover {
     background-color: black;
     color: white;
     transition: all 1s ease;
   }
 }
+
+.ordered {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color:transparent;
+  color: white;
+  font-size: large;
+  margin-bottom: 10px;
+}
+
