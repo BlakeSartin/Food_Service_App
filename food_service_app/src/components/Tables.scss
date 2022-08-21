@@ -113,7 +113,6 @@
   align-items: center;
   flex-direction: row;
   width: 100%;
-  
 }
 .add{
   display: none;
@@ -126,7 +125,7 @@
 .remove{
   display: none;
 }
-.expanded_remove{
+.remove{
  color: red;
  margin-left: 10px;
   margin-right: 5px;

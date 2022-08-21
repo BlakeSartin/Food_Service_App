@@ -14,7 +14,7 @@ export default function Table({ table }) {
   return (
     <div className={isActive ? "table_container" : "expanded_table_container"}>
       <div className={isActive ? "table" : "expanded_table"}>
-        <div className="button_container">
+        <div className={!isActive ? "button_container": null}>
           <button
             className={isActive ? "table-button" : "expanded_table_button"}
             onClick={handleToggle}
