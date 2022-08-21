@@ -23,7 +23,9 @@ export default function Table({table}) {
             <button className={isActive ? "seat" : "expanded_seat"}>
               {seat.number} <Chair fontSize="small" />
             </button>
-            <h1 className={isActive ? "ordered" : "expanded_ordered"}>{seat.ordered}</h1>
+            <div>{seat.ordered.map((order) => (
+              <h1 className={isActive ? "ordered" : "expanded_ordered"}>{order}</h1>
+            ))}</div>
             </>
           ))}
         </div>
