@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Tables.scss";
-import { Chair, TableBar } from "@mui/icons-material";
+import Table from "./Table";
 
 let data = [
   {
@@ -68,32 +68,11 @@ let data = [
 ];
 
 export default function Tables() {
-  const [isActive, setActive] = useState("false");
-
-  const handleToggle = () => {
-    setActive(!isActive);
-  };
-
   return (
-    <div className={isActive ? "table_container" : "expanded_table_container"}>
+    <>
       {data.map((d) => (
-        <div className={isActive ? "table" : "expanded_table"}>
-          <button
-            className={isActive ? "table-button" : "expanded_table_button"}
-            onClick={handleToggle}
-          >
-            {d.table} <TableBar />
-          </button>
-          {d.seats.map((seat) => (
-            <>
-            <button className={isActive ? "seat" : "expanded_seat"}>
-              {seat.number} <Chair fontSize="small" />
-            </button>
-            <h1 className={isActive ? null : "ordered"}>{seat.ordered}</h1>
-            </>
-          ))}
-        </div>
+        <Table  table={d} />
       ))}
-    </div>
+    </>
   );
 }

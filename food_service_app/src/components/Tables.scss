@@ -92,6 +92,10 @@
 }
 
 .ordered {
+  display: none;
+}
+
+.expanded_ordered {
   display: flex;
   justify-content: center;
   align-items: flex-start;
