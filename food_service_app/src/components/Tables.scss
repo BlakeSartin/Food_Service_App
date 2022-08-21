@@ -97,12 +97,38 @@
 
 .expanded_ordered {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
   background-color:transparent;
   color: white;
   font-size: large;
   margin-bottom: 10px;
+  padding: 5px;
+  border: none;
+}
+.button_container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  
+}
+.add{
+  display: none;
+}
+.expanded_add {
+  color: green;
+  margin-left: 10px;
+  margin-right: 5px;
+}
+.remove{
+  display: none;
+}
+.expanded_remove{
+ color: red;
+ margin-left: 10px;
+  margin-right: 5px;
 }
 
