@@ -114,6 +114,13 @@
   flex-direction: row;
   width: 100%;
 }
+.food_and_drink_button_container{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+}
 .add{
   display: none;
 }
@@ -125,8 +132,24 @@
 .remove{
   display: none;
 }
-.remove{
+.expanded_remove{
  color: red;
+ margin-left: 10px;
+  margin-right: 12px;
+}
+.food{
+  display: none;
+}
+.expanded_food {
+  color: orange;
+  margin-left: 10px;
+  margin-right: 5px;
+}
+.drink{
+  display: none;
+}
+.expanded_drink{
+ color: lightblue;
  margin-left: 10px;
   margin-right: 5px;
 }
