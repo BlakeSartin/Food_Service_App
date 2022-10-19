@@ -6,6 +6,7 @@ import Bills from "./components/Bills";
 import Checkout from "./components/Checkout";
 import Tables from "./components/Tables";
 
+
 function App() {
   let component;
   switch (window.location.pathname) {
@@ -42,6 +43,9 @@ function App() {
           <input className="login-form-part" type="text" id="server#"></input>
           <input className="login-button" type="submit" value="Login"></input>
         </form>
+        </div>
+        <div className="image-container">
+        <img src="/images/bar.jpg" alt=""></img>
         </div>
     </div>
   );
