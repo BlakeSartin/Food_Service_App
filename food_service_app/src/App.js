@@ -32,8 +32,8 @@ function App() {
       <Topbar />
       {component}
       <div className="login">
-        <p>Hello, Thank you for using the F&D food service app! Please Login!</p>
-        <form>
+        <p className="login-p">Hello, Thank you for using the F&D food service app! Please Login!</p>
+        <form className="login-form">
           <label for="servername">Server Name</label>
           <input type="text" id="servername" name="servername"></input>
           <label for="server#">Server ID Number</label>
