@@ -5,13 +5,8 @@ import Food from "./components/Food";
 import Bills from "./components/Bills";
 import Checkout from "./components/Checkout";
 import Tables from "./components/Tables";
-import { useState } from "react";
-
-
 
 function App() {
-  
-
   let component;
   switch (window.location.pathname) {
     case "/":
@@ -34,11 +29,20 @@ function App() {
   }
   return (
     <div>
-    <Topbar />
-    {component}
+      <Topbar />
+      {component}
+      <div className="login">
+        <p>Hello, Thank you for using the F&D food service app! Please Login!</p>
+        <form>
+          <label for="servername">Server Name</label>
+          <input type="text" id="servername" name="servername"></input>
+          <label for="server#">Server ID Number</label>
+          <input type="text" id="server#"></input>
+          <input type="submit" value="Login"></input>
+        </form>
+        </div>
     </div>
-
-  )
+  );
 }
 
 export default App;
