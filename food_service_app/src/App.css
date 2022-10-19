@@ -28,3 +28,20 @@
   justify-content: center;
   flex-direction: column;
 }
+
+.login-p{
+  font-size:x-large;
+  padding: 10px;
+}
+
+.login-form-part{
+  padding: 10px;
+  font-size: large;
+  border-radius: 5px;
+}
+.login-button{
+  font-size: x-large;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+}

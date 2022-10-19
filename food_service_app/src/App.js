@@ -34,11 +34,11 @@ function App() {
       <div className="login">
         <p className="login-p">Hello, Thank you for using the F&D food service app! Please Login!</p>
         <form className="login-form">
-          <label for="servername">Server Name</label>
-          <input type="text" id="servername" name="servername"></input>
-          <label for="server#">Server ID Number</label>
-          <input type="text" id="server#"></input>
-          <input type="submit" value="Login"></input>
+          <label className="login-form-part" for="servername">Server Name</label>
+          <input className="login-form-part" type="text" id="servername" name="servername"></input>
+          <label className="login-form-part" for="server#">Server ID Number</label>
+          <input className="login-form-part" type="text" id="server#"></input>
+          <input className="login-button" type="submit" value="Login"></input>
         </form>
         </div>
     </div>
