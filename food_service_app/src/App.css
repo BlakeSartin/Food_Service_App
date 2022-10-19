@@ -19,7 +19,7 @@
   justify-content: center;
   flex-direction: column;
   padding: 10px;
-  margin: 5px;
+  
 }
 
 .login-form{
@@ -30,8 +30,8 @@
 }
 
 .login-p{
+  padding: 5px;
   font-size:x-large;
-  padding: 10px;
 }
 
 .login-form-part{

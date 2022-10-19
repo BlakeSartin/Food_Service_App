@@ -32,7 +32,9 @@ function App() {
       <Topbar />
       {component}
       <div className="login">
-        <p className="login-p">Hello, Thank you for using the F&D food service app! Please Login!</p>
+        <div className="login-p">Hello!</div>
+        <div className="login-p">Thanks for using F&D!</div>
+        <div className="login-p">Please Login!</div>
         <form className="login-form">
           <label className="login-form-part" for="servername">Server Name</label>
           <input className="login-form-part" type="text" id="servername" name="servername"></input>
