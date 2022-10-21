@@ -3,7 +3,7 @@ import "./Topbar.scss"
 
 export default function Topbar() {
   return <nav className="nav">
-    <a href="/" className="site-title">F&D</a>
+    <a className="site-title">F&D</a>
     <ul>
       <li>
         <a href="/food">Food</a>

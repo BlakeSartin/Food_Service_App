@@ -5,12 +5,13 @@ import Food from "./components/Food";
 import Bills from "./components/Bills";
 import Checkout from "./components/Checkout";
 import Tables from "./components/Tables";
-
+import Login from "./components/Login";
 
 function App() {
   let component;
   switch (window.location.pathname) {
     case "/":
+      component = <Login/>;
       break;
     case "/drinks":
       component = <Drinks />;
@@ -32,21 +33,6 @@ function App() {
     <div>
       <Topbar />
       {component}
-      <div className="login">
-        <div className="login-p">Hello!</div>
-        <div className="login-p">Thanks for using F&D!</div>
-        <div className="login-p">Please Login!</div>
-        <form className="login-form">
-          <label className="login-form-part" for="servername">Server Name</label>
-          <input className="login-form-part" type="text" id="servername" name="servername"></input>
-          <label className="login-form-part" for="server#">Server ID Number</label>
-          <input className="login-form-part" type="text" id="server#"></input>
-          <input className="login-button" type="submit" value="Login"></input>
-        </form>
-        </div>
-        <div className="image-container">
-        <img src="/images/bar.jpg" alt=""></img>
-        </div>
     </div>
   );
 }
