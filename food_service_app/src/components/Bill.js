@@ -14,7 +14,7 @@ export default function Bill({ bill }) {
       <div className={isActive ? "bill" : "expanded_bill"}>
         <div
           className={
-            isActive ? "button_container" : "expanded_button_container"
+            isActive ? "bill_button_container" : "expanded_bill_button_container"
           }
         >
           <button
