@@ -1,30 +1,78 @@
 import React from "react";
-import {Chair, TableBar} from "@mui/icons-material"
-import "./Bills.scss"
+import Bill from "./Bill"
+import "./Bills.scss";
 
+let data = [
+  {
+    bill: "1",
+    seats: [
+      { number: "1", ordered: ["1x Cheese Burger", "1x Fries", "1x Coke"] },
+      { number: "2", ordered: ["1x Cheese Burger", "1x Fries", "1x Coke"] },
+      { number: "3", ordered: ["1x Cheese Burger", "1x Fries", "1x Coke"] },
+      { number: "4", ordered: ["1x Cheese Burger", "1x Fries", "1x Coke"] },
+      { number: "5", ordered: ["1x Cheese Burger", "1x Fries", "1x Coke"] },
+      { number: "6", ordered: ["1x Cheese Burger", "1x Fries", "1x Coke"] },
+      { number: "7", ordered: ["1x Cheese Burger", "1x Fries", "1x Coke"] },
+      { number: "8", ordered: ["1x Cheese Burger", "1x Fries", "1x Coke"] },
+    ],
+  },
+  {
+    bill: "2",
+    seats: [
+      { number: "1", ordered: ["1x Cheese Burger", "1x Fries", "1x Coke"] },
+      { number: "2", ordered: ["1x Cheese Burger", "1x Fries", "1x Coke"] },
+      { number: "3", ordered: ["1x Cheese Burger", "1x Fries", "1x Coke"] },
+      { number: "4", ordered: ["1x Cheese Burger", "1x Fries", "1x Coke"] },
+    ],
+  },
+  {
+    bill: "3",
+    seats: [
+      { number: "1", ordered: ["1x Cheese Burger", "1x Fries", "1x Coke"] },
+      { number: "2", ordered: ["1x Cheese Burger", "1x Fries", "1x Coke"] },
+      { number: "3", ordered: ["1x Cheese Burger", "1x Fries", "1x Coke"] },
+      { number: "4", ordered: ["1x Cheese Burger", "1x Fries", "1x Coke"] },
+      { number: "5", ordered: ["1x Cheese Burger", "1x Fries", "1x Coke"] },
+      { number: "6", ordered: ["1x Cheese Burger", "1x Fries", "1x Coke"] },
+    ],
+  },
+  {
+    bill: "4",
+    seats: [
+      { number: "1", ordered: ["1x Cheese Burger", "1x Fries", "1x Coke"] },
+      { number: "2", ordered: ["1x Cheese Burger", "1x Fries", "1x Coke"] },
+      { number: "3", ordered: ["1x Cheese Burger", "1x Fries", "1x Coke"] },
+      { number: "4", ordered: ["1x Cheese Burger", "1x Fries", "1x Coke"] },
+      { number: "5", ordered: ["1x Cheese Burger", "1x Fries", "1x Coke"] },
+    ],
+  },
+  {
+    bill: "5",
+    seats: [
+      { number: "1", ordered: ["1x Cheese Burger", "1x Fries", "1x Coke"] },
+      { number: "2", ordered: ["1x Cheese Burger", "1x Fries", "1x Coke"] },
+    ],
+  },
+  {
+    bill: "6",
+    seats: [
+      { number: "1", ordered: ["1x Cheese Burger", "1x Fries", "1x Coke"] },
+      { number: "2", ordered: ["1x Cheese Burger", "1x Fries", "1x Coke"] },
+      { number: "3", ordered: ["1x Cheese Burger", "1x Fries", "1x Coke"] },
+      { number: "4", ordered: ["1x Cheese Burger", "1x Fries", "1x Coke"] },
+      { number: "5", ordered: ["1x Cheese Burger", "1x Fries", "1x Coke"] },
+      { number: "6", ordered: ["1x Cheese Burger", "1x Fries", "1x Coke"] },
+      { number: "7", ordered: ["1x Cheese Burger", "1x Fries", "1x Coke"] },
+    ],
+  },
+];
 
 export default function Bills() {
-  return <div className="bills-container">
-    <div className="bill">
-      <h1><TableBar fontSize="large"/> 1</h1>
-      <div className="seat-bill">
-      <h2 className="chair-icon"><Chair /> #1 Blake</h2>
-      <h3 className="purchases">1x Burger & Fries</h3>
-      <h2>Total:</h2>
-      <h2 className="total">16.99$</h2>
-      </div>
-      <div className="seat-bill">
-      <h2 className="chair-icon"><Chair /> #2 Blake</h2>
-      <h3 className="purchases">1x Burger & Fries</h3>
-      <h2>Total:</h2>
-      <h2 className="total">16.99$</h2>
-      </div>
-      <div className="seat-bill">
-      <h2 className="chair-icon"><Chair /> #3 Blake</h2>
-      <h3 className="purchases">1x Burger & Fries</h3>
-      <h2>Total:</h2>
-      <h2 className="total">16.99$</h2>
-      </div>
-      </div>
-    </div>
+  return (
+    <>
+      {data.map((d) => (
+        <Bill bill={d} />
+      ))}
+    </>
+  );
 }
