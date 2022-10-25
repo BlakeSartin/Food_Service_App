@@ -10,34 +10,28 @@ export default function Bill({ bill }) {
   };
 
   return (
-    <div className={isActive ? "bill_container" : "expanded_bill_container"}>
-      <div className={isActive ? "bill" : "expanded_bill"}>
-        <div
-          className={
-            isActive ? "bill_button_container" : "expanded_bill_button_container"
-          }
-        >
+    <div className="bill_container">
+      <div className="bill">
           <button
-            className={isActive ? "bill_button" : "expanded_bill_button"}
+            className="bill_button"
             onClick={handleToggle}
           >
             {bill.bill} <TableBar />
           </button>
-        </div>
       </div>
       {bill.seats.map((seat) => (
-        <>
-          <button className={isActive ? "seat" : "expanded_seat"}>
+        <div className="bill_seat_container">
+          <button className={isActive ? "bill_seat" : "expanded_bill_seat"}>
             {seat.number} <Chair />
           </button>
           <div>
             {seat.ordered.map((order) => (
-              <h1 className={isActive ? "ordered" : "expanded_ordered"}>
+              <h1 className={isActive ? "bill_ordered" : "expanded_bill_ordered"}>
                 {order}
               </h1>
             ))}
           </div>
-        </>
+        </div>
       ))}
     </div>
   );
