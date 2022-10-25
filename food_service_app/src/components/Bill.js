@@ -8,7 +8,29 @@ export default function Bill({ bill }) {
   const handleToggle = () => {
     setActive(!isActive);
   };
-console.log(bill.seats[1].ordered[1].price)
+
+const totalAmount = () => {
+  let seats = bill.seats
+  let total=0
+  for (let seat of seats) {
+    total += seat.ordered.reduce((acc, value) => {
+      return acc + value.price * value.amount
+    }, 0)
+  }
+  return Math.round(total * 100) / 100
+}
+
+const totalseatAmount = () => {
+  let seats = bill.seats
+  let total=0
+  for (let seat of seats) {
+    console.log(seat)
+    total += seat.ordered.reduce((acc, value) => {
+      return acc + value.price * value.amount
+    }, 0)
+    return Math.round(total * 100) / 100
+  }
+}
 
   return (
     <div className="bill_container">
@@ -19,6 +41,7 @@ console.log(bill.seats[1].ordered[1].price)
           >
             {bill.bill} <TableBar />
           </button>
+          <h3 className={isActive ? "total" : "expanded_total"}>Total = {totalAmount()}</h3>
       </div>
       {bill.seats.map((seat) => (
         <div className="bill_seat_container">
@@ -28,11 +51,11 @@ console.log(bill.seats[1].ordered[1].price)
           <div>
             {seat.ordered.map((order) => (
               <h1 className={isActive ? "bill_ordered" : "expanded_bill_ordered"}>
-                {order.ammount}x {order.item} {order.price}
+                {order.amount}x {order.item} {order.price}
               </h1>
             ))}
           </div>
-          <h3 className={isActive ? "total" : "expanded_total"}>Total=</h3>
+          <h3 className={isActive ? "total" : "expanded_total"}>Total = {totalseatAmount()}</h3>
         </div>
       ))}
     </div>
