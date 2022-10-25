@@ -8,6 +8,7 @@ export default function Bill({ bill }) {
   const handleToggle = () => {
     setActive(!isActive);
   };
+console.log(bill.seats[1].ordered[1].price)
 
   return (
     <div className="bill_container">
@@ -27,10 +28,11 @@ export default function Bill({ bill }) {
           <div>
             {seat.ordered.map((order) => (
               <h1 className={isActive ? "bill_ordered" : "expanded_bill_ordered"}>
-                {order}
+                {order.ammount}x {order.item} {order.price}
               </h1>
             ))}
           </div>
+          <h3 className={isActive ? "total" : "expanded_total"}>Total=</h3>
         </div>
       ))}
     </div>
