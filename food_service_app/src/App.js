@@ -3,7 +3,6 @@ import Topbar from "./components/Topbar";
 import Drinks from "./components/Drinks";
 import Food from "./components/Food";
 import Bills from "./components/Bills";
-import Checkout from "./components/Checkout";
 import Tables from "./components/Tables";
 import Login from "./components/Login";
 
@@ -24,9 +23,6 @@ function App() {
       break;
     case "/bills":
       component = <Bills />;
-      break;
-    case "/checkout":
-      component = <Checkout />;
       break;
   }
   return (
